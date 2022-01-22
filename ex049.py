@@ -1,17 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan 19 09:46:08 2022
+'''
+    Fazer um programa que mostre a tabuada de um numero escilhido pelo usuario
+'''
 
-@author: erickdsd
-
-Refaça o DESAFIO 9, mostrando a tabuada de um número que o usuário escolher,
-só que agora utilizando um laço for.
-
-"""
-
-n = int(input('Digite umnumero para ver sua tabuada: '))
-for c in range(0,11,1):
-    print(f'{n} x {c} = {n*c}')
-
-
+n = int(input('Digite um numero: '))
+for c in range(0, 11):
+    print(f'{n} X {c} = {n*c}')
