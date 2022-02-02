@@ -20,4 +20,7 @@ while palpite != sorteado:
         print(f'Parabéns você acertou! Foram necessárias {tentativas} tentativas.')
     else:
         tentativas += 1
-        print(f'Não é esse, por favor, tente novamente!')
+        if palpite < sorteado:
+            print(f'Mais! tente novamente!')
+        elif palpite > sorteado:
+            print('Menos! tente novamente!')
