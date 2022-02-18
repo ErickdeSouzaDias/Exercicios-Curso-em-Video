@@ -7,7 +7,7 @@ o maior valor que estão na tupla.
 from random import choices
 
 numeros = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-sorteados = choices(numeros, k=5)
+sorteados = tuple(choices(numeros, k=5))
 
 print('Os numeros sorteados foram: ', end="")
 for numero in sorteados:
@@ -16,3 +16,4 @@ print()
 
 print(f'O maior número sorteado foi {max(sorteados)}.')
 print(f'O menor número sorteado foi {min(sorteados)}.')
+
