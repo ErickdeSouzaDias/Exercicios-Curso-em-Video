@@ -5,14 +5,27 @@ A) Quantas pessoas foram cadastradas.
 B) Uma listagem com as pessoas mais pesadas.
 C) Uma listagem com as pessoas mais leves.
 """
-temp = list()
-princ = list()
-maior = menor = 0
+cadastros = list()
+cont = 0
 
 while True:
-    temp.apend(str(input('Nome: ')))
-    temp.apend(float(input('Peso: ')))
-    if len(temp) == 0:
-        maior = menor = temp[1]
+    dados = list()
+    cont += 1
+    dados.append(str(input('Qual seu nome: ')))
+    dados.append(float(input('Qual seu peso: ')))
+    cadastros.append(dados)
+
+    if cont == 1:
+        maior = menor = dados[1]
     else:
-        if temp[1] > maior:
+        if dados[1] > maior:
+            maior = dados[1]
+        if dados[1] < menor:
+            menor = dados[1]
+
+    del dados
+    Continuar_Programa = str(input('Deseja continuar: [S/N] ')).upper().strip()[0]
+    if Continuar_Programa == "N":
+        break
+
+print(cadastros, maior, menor)
