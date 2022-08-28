@@ -7,7 +7,7 @@ impares = []
 valores = [pares, impares]
 
 for posicao in range(1, 8):
-    numero = float(input(f'Digite o {posicao}º número: '))
+    numero = int(input(f'Digite o {posicao}º número: '))
 
     if numero % 2 == 0:
         pares.append(numero)
@@ -16,5 +16,5 @@ for posicao in range(1, 8):
 
 print(20*'=*')
 
-print(f'Os valores pares digitados foram {pares}.')
-print(f'Os valores impares digitados foram {impares}.')
+print(f'Os valores pares digitados foram {sorted(pares)}.')
+print(f'Os valores impares digitados foram {sorted(impares)}.')
