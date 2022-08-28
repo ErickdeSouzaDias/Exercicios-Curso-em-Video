@@ -2,19 +2,17 @@
 lista única que mantenha separados os valores pares e ímpares. No final, mostre os valores pares e ímpares em ordem
 crescente. """
 
-pares = []
-impares = []
-valores = [pares, impares]
+valores = [[], []]
 
 for posicao in range(1, 8):
     numero = int(input(f'Digite o {posicao}º número: '))
 
     if numero % 2 == 0:
-        pares.append(numero)
+        valores[0].append(numero)
     else:
-        impares.append(numero)
+        valores[1].append(numero)
 
 print(20*'=*')
 
-print(f'Os valores pares digitados foram {sorted(pares)}.')
-print(f'Os valores impares digitados foram {sorted(impares)}.')
+print(f'Os valores pares digitados foram {sorted(valores[0])}.')
+print(f'Os valores impares digitados foram {sorted(valores[1])}.')
